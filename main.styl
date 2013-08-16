@@ -27,14 +27,14 @@ header.site-header
 		display: inline-block
 
 	nav.nav-left a
-		margin-left: 40px;
+		margin-left: 50px;
 
 	nav.nav-right a
-		margin-left: 40px;
+		margin-right: 50px;
 
 	h1.logo 
 		display: inline-block;
-		margin: 0 40px;
+		margin: 0 50px;
 		a 
 			width: 200px;
 
@@ -46,7 +46,8 @@ section.splash
 	padding: 200px 0;
 	text-align: center;
 	position: relative;
-
+	background: #333 url('img/placeholder.jpg');
+	background-size: cover;
 	img 
 		width: auto
 		max-width: 100%;
@@ -64,6 +65,8 @@ section.splash
 section.about
 	position: relative; 
 	text-align: left;
+	border-bottom: 2px solid #2f2f2f;
+
 	.about-left, .about-right
 		width: 50%;
 		display: inline-block
@@ -73,7 +76,7 @@ section.about
 		text-align: center
 
 	.about-right
-		background: #333 url('img/logo.png') center no-repeat;
+		background: #2f2f2f url('img/logo.png') center no-repeat;
 		background-size: 30%;
 		position: absolute;
 		right: 0;
@@ -96,9 +99,15 @@ section.profiles
 
 section.contact 
 	text-align: left;
-	background-color: #333;
+	background: #333 url('img/placeholder.jpg');
+	background-size: cover;
 	color: white;
+
 	h3 
 		color: white;
 section
 	padding: 40px 0;
+
+footer.site-footer
+	background: #222;
+	padding: 20px;
