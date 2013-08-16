@@ -1,0 +1,117 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  text-align: center;
+  color: #4d4d4d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-weight: bold;
+  color: #000;
+}
+header.site-header {
+  background: #2f2f2f;
+  border-top: 2px solid #ff0;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1000;
+}
+header.site-header a {
+  color: #fff;
+  text-transform: uppercase;
+}
+header.site-header nav.nav-left,
+header.site-header nav.nav-right {
+  display: inline-block;
+}
+header.site-header nav.nav-left a {
+  margin-left: 40px;
+}
+header.site-header nav.nav-right a {
+  margin-left: 40px;
+}
+header.site-header h1.logo {
+  display: inline-block;
+  margin: 0 40px;
+}
+header.site-header h1.logo a {
+  width: 200px;
+  display: inline-block;
+}
+header.site-header h1.logo a img {
+  width: 100%;
+}
+section.splash {
+  background: #000;
+  padding: 200px 0;
+  text-align: center;
+  position: relative;
+}
+section.splash img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+section.splash a.skip-to-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  padding: 20px;
+}
+section.about {
+  position: relative;
+  text-align: left;
+}
+section.about .about-left,
+section.about .about-right {
+  width: 50%;
+  display: inline-block;
+}
+section.about .about-left {
+  padding: 100px 140px;
+  text-align: center;
+}
+section.about .about-right {
+  background: #333 url("img/logo.png") center no-repeat;
+  background-size: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+section.faq .question {
+  max-width: 500px;
+  margin: 50px auto;
+}
+section.profiles {
+  padding-top: 50px;
+}
+section.profiles .profiles-users {
+  margin-top: 30px;
+  background: #333;
+  padding: 50px;
+}
+section.contact {
+  text-align: left;
+  background-color: #333;
+  color: #fff;
+}
+section.contact h3 {
+  color: #fff;
+}
+section {
+  padding: 40px 0;
+}
