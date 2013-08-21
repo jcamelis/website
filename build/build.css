@@ -1,3 +1,26 @@
+.tip {
+  position: absolute;
+  padding: 5px;
+  z-index: 1000;
+  /* default offset for edge-cases: https://github.com/component/tip/pull/12 */
+  top: 0;
+  left: 0;
+}
+
+/* effects */
+
+.tip.fade {
+  transition: opacity 100ms;
+  -moz-transition: opacity 100ms;
+  -webkit-transition: opacity 100ms;
+}
+
+.tip-hide {
+  opacity: 0;
+}
+
+
+
 /* Vars
 -------------------------------------------------- */
 @-webkit-keyframes pulse_animation {
@@ -68,7 +91,7 @@ h5 {
   color: #000;
 }
 .preload {
-  background: #fff url("img/logo.png") center no-repeat;
+  background: #fff url("democracyos-website/./img/logo.png") center no-repeat;
   position: fixed;
   top: 0;
   left: 0;
@@ -149,7 +172,7 @@ section.splash a.skip-to-content {
   text-align: center;
 }
 section.splash a.skip-to-content i {
-  background: #fff url("img/icon-arrow-down.png") center 14px no-repeat;
+  background: #fff url("democracyos-website/./img/icon-arrow-down.png") center 14px no-repeat;
   display: block;
   width: 34px;
   margin: auto;
@@ -202,7 +225,7 @@ section.about .about-left .kickstarter-link .arrow img {
   margin-left: 4px;
 }
 section.about .about-right {
-  background: #2f2f2f url("img/logo.png") center no-repeat;
+  background: #2f2f2f url("democracyos-website/./img/logo.png") center no-repeat;
   background-size: 50%;
   position: absolute;
   right: 0;
@@ -280,7 +303,7 @@ section.contact address p a {
   color: #fff;
 }
 section.contact address p i {
-  background: url("img/hexagon.png") center no-repeat;
+  background: url("democracyos-website/./img/hexagon.png") center no-repeat;
   display: inline-block;
   background-size: 100%;
   width: 38px;

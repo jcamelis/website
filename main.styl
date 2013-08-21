@@ -3,6 +3,17 @@
 $bg_grey = #2f2f2f;
 
 
+
+@-webkit-keyframes pulse_animation 
+	0% { -webkit-transform: opacity(.2); }
+	30% { -webkit-transform: opacity(.5); }
+	40% { -webkit-transform: opacity(.5); }
+	50% { -webkit-transform:  opacity(.5); }
+	60% { -webkit-transform:  opacity(.5); }
+	70% { -webkit-transform:  opacity(.5); }
+	80% { -webkit-transform:  opacity(.5); }
+	100% { -webkit-transform:  opacity(1); }
+
 /* General
 -------------------------------------------------- */
 html
@@ -26,6 +37,31 @@ h1,h2,h3,h4,h5,h5
 	font-weight: bold
 	color: black;
 
+
+.preload
+	background: white url('img/logo.png') center no-repeat
+	position: fixed
+	top: 0;
+	left: 0;
+	right: 0
+	bottom: 0
+	z-index: 100
+	display: none
+
+.pulse
+	-webkit-animation-name: 'pulse_animation';
+	-webkit-animation-duration: 5000ms;
+	-webkit-transform-origin:70% 70%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+
+
+body.not-loaded
+	// overflow: hidden;
+	.page
+		// opacity: 0;
+
+
 header.site-header
 	background: $bg_grey;
 	border-top: 2px solid yellow;
@@ -48,7 +84,6 @@ header.site-header
 			img 
 				width: 120px;
 				margin-top: -4px;
-
 		a
 			margin-left: 60px;
 
@@ -69,7 +104,8 @@ section.splash
 	padding: 200px 0;
 	text-align: center;
 	position: relative;
-	background: #333 url('img/placeholder.jpg');
+	background: #333;
+	// background: red;
 	background-size: cover;
 	img 
 		width: auto
@@ -247,4 +283,11 @@ section
 
 footer.site-footer
 	background: #222;
-	padding: 20px;
+	padding: 20px 0 18px 0;
+	span 
+		line-height: 22px;
+
+
+	.share-links 
+		iframe 
+			margin-right: 20px;
