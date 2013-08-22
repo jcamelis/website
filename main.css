@@ -88,8 +88,10 @@ header.site-header {
   background: #2f2f2f;
   border-top: 2px solid #ff0;
   text-align: center;
-  padding: 30px 0;
   z-index: 1000;
+}
+header.site-header .container {
+  padding: 30px 0;
 }
 header.site-header a {
   color: #999;

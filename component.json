@@ -1,7 +1,7 @@
 {
 	"name": "democracyos-website",
 	"dependencies":{
-		"component/dom":"*",
+		"component/jquery":"*",
 		"component/tip":"*",
 		"anthonyshort/scroll-to": "*"
 	},
