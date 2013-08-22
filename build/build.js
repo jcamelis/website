@@ -10563,9 +10563,11 @@ module.exports = scrollTo;
 });
 require.register("democracyos-website/index.js", function(exports, require, module){
 var jquery = require("jquery");
-var new_height = jquery(window).height() - jquery('header.site-header').height() ;
+var new_height = jquery(window).height() - jquery('header.site-header#site-header-primary').height() ;
 
 jquery('.splash').css("height",  new_height);
+
+jquery('header#site-header-primary').clone().prependTo('.page').removeAttr("id").addClass('site-header-secondary');
 
 jquery('a[href*="#"]').click(function(event){
 
@@ -10589,6 +10591,23 @@ jquery('a[href*="#"]').click(function(event){
 
 	//goto that anchor by setting the body scroll top to anchor top
 	jquery('html, body').animate({scrollTop:target_top}, 500);
+});
+
+
+jquery(document).scroll(function() {
+  if (jquery(document).scrollTop() >= new_height) {
+
+  		console.log('show');
+		
+		jquery(".site-header-secondary").removeClass("hide-header").addClass("show-header");
+
+  } else {
+
+  		console.log('hide');
+
+		jquery(".site-header-secondary").addClass("hide-header");
+
+  }
 });
 });
 require.alias("component-jquery/index.js", "democracyos-website/deps/jquery/index.js");
