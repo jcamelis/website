@@ -29,6 +29,12 @@ jquery('a[href*="#"]').click(function(event){
 	jquery('html, body').animate({scrollTop:target_top}, 500);
 });
 
+jquery('header.site-header a').click(function(event){
+
+	jquery('header.site-header a').removeClass('current');
+	jquery(this).addClass('current');
+
+});
 
 jquery(document).scroll(function() {
   if (jquery(document).scrollTop() >= new_height) {

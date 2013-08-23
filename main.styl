@@ -80,6 +80,11 @@ header.site-header
 		left: 0;
 		right: 0;
 		padding-bottom: 16px;
+		-o-transition:all 1s ease-out; 
+		-moz-transition:all 1s ease-out;  
+		-ms-transition:all 1s ease-out;   
+		transition:all 1s ease-out;  
+
 		h1.logo 
 			img 
 				display: none
@@ -94,11 +99,12 @@ header.site-header
 	a 	
 		color: #999;
 		text-transform: uppercase
-		&:hover 
+		&:hover, &.current
 			color: white;
 		span 
 			color: white;
 			font-size: 16px;
+
 
 	nav.nav-left, nav.nav-right
 		display: inline-block
