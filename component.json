@@ -1,0 +1,11 @@
+{
+	"name": "democracyos-website",
+	"dependencies":{
+		"component/jquery":"*",
+		"component/tip":"*",
+		"anthonyshort/scroll-to": "*"
+	},
+	"scripts":["index.js"],
+	"styles": ["main.css"],
+	"files": ["img/logo.png", "img/hexagon.png", "img/icon-arrow-down.png"]
+}
