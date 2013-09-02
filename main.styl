@@ -2,17 +2,37 @@
 -------------------------------------------------- */
 $bg_grey = #2f2f2f;
 
+.carousel-fade {
+	.item {
+		opacity: 0;
+		-webkit-transition: 0.6s ease-in-out top;
+		-moz-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+		z-index: 8;
+	}
 
+	.active {
+		opacity: 1;
+	}
 
-@-webkit-keyframes pulse_animation 
-	0% { -webkit-transform: opacity(.2); }
-	30% { -webkit-transform: opacity(.5); }
-	40% { -webkit-transform: opacity(.5); }
-	50% { -webkit-transform:  opacity(.5); }
-	60% { -webkit-transform:  opacity(.5); }
-	70% { -webkit-transform:  opacity(.5); }
-	80% { -webkit-transform:  opacity(.5); }
-	100% { -webkit-transform:  opacity(1); }
+	.active.left,
+	.active.right {
+		left: 0;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.next.left,
+	.prev.right {
+		opacity: 1;
+	}
+
+  .carousel-control {
+  		z-index: 2;
+  }
+}
+
 
 /* General
 -------------------------------------------------- */
@@ -67,18 +87,25 @@ header.site-header
 	border-top: 2px solid yellow;
 	text-align: center;
 	z-index: 1000;
+	overflow: visible !important;
 	&#site-header-primary
 		.container
 			h1.logo
-				margin: 10px 0;
+				margin: 20px 0;
 				span 
 					display: none
 			nav 
-				margin-top: 74px;
+				margin-top: 82px;
+			.twitter-header
+				margin-top: -20px;
+
+		.triangle 
+			top: 180px;
+
 
 	&.site-header-secondary
 		position: fixed;
-		top: -70px;
+		top: -80px;
 		left: 0;
 		right: 0;
 		padding-bottom: 16px;
@@ -86,20 +113,26 @@ header.site-header
 		-moz-transition:all 1s ease-out;  
 		-ms-transition:all 1s ease-out;   
 		transition:all 1s ease-out;  
-
+		.twitter-header
+			margin-top: -11px !important;
 		h1.logo 
+			padding-top: 8px;
 			img 
 				display: none
 			span 
 				font-size: 20px;
 				color: white
 		nav 
-			padding-top: 17px;
+			padding-top: 24px;
 		&.show-header
 			top: 0px;
 
 		&.hide-header
-			top: -70px;
+			top: -80px;
+
+		.triangle 
+			top: 55px;
+
 	a 	
 		color: #999;
 		text-transform: uppercase
@@ -111,12 +144,24 @@ header.site-header
 
 	.container 
 		position: relative;
+		.twitter-header 
+			background: url('img/hexagon.png') center;
+			width: 30px;
+			height: 36px;
+			margin-left: 20px !important;
+			background-size: cover;
+			display: inline-block;
+			color: black;
+			text-align: center
+			line-height: 40px;
+
 		nav.nav-left, nav.nav-right
 			display: block;
 			float: left
 			width: 40%;
 
 		nav.nav-left 
+			text-align: left;
 			.kickstarter
 				display: inline-block
 				img 
@@ -126,6 +171,7 @@ header.site-header
 				margin-right: 60px;
 
 		nav.nav-right 
+			text-align: right
 			a
 				margin-left: 60px;
 
@@ -136,39 +182,22 @@ header.site-header
 			margin: 0;
 			a 
 				display: block
-				text-align: center
 				img 
 					width: 100%;
 
-.carousel-fade {
-	.item {
-		opacity: 0;
-		-webkit-transition: 0.6s ease-in-out top;
-		-moz-transition-property: opacity;
-		-o-transition-property: opacity;
-		transition-property: opacity;
-	}
+.triangle
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;	
+	border-top: 20px solid $bg_grey;
+	// border-top: 20px solid red;
+	position: absolute;
+	margin: auto;
+	left: 40%;
+	right: 40%;
+	z-index: 10;
 
-	.active {
-		opacity: 1;
-	}
-
-	.active.left,
-	.active.right {
-		left: 0;
-		opacity: 0;
-		z-index: 1;
-	}
-
-	.next.left,
-	.prev.right {
-		opacity: 1;
-	}
-
-  .carousel-control {
-  		z-index: 2;
-  }
-}
 
 
 section.splash

@@ -1,5 +1,5 @@
 
-var new_height = jQuery(window).height() - 166 ;
+var new_height = jQuery(window).height() - 183 ;
 
 jQuery(window).ready(function() {
 
