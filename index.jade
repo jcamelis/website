@@ -7,8 +7,11 @@ html
     //- http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400italic,400,700,600
     link(href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600", rel="stylesheet")
     link(href="font/social.css", rel='stylesheet', media='screen')
-    link(href="build/build.css", rel='stylesheet', media='screen')
-  
+    link(href="main.css", rel='stylesheet', media='screen')
+    script(src="//code.jquery.com/jquery.js")
+    script(src="index.js")
+
+
   body.not-loaded
 
     .preload.pulse
@@ -26,12 +29,12 @@ html
           h1.logo
             a(href="index.html")
               img(src="img/logo.png")
-              span DemocracyOS
+              span Democracy&#9679;OS
           
           nav.nav-right
-            a(href="#profiles") Profiles
+            a(href="#profiles") who we are
             a(href="#faq") FAQ
-            a(href="#contact") Contact
+            a(href="#contact") join us
 
       section.splash
         .container
@@ -176,9 +179,5 @@ html
 
               iframe(src='http://ghbtns.com/github-btn.html?user=democracyos&repo=app&type=fork&count=true&size=small', allowtransparency='true', frameborder='0', scrolling='0', width='80', height='20')
 
-
-    script(src='build/build.js')
-    script
-      require("democracyos-website");
 
 

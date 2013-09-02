@@ -1,53 +1,58 @@
-var jquery = require("jquery");
-var new_height = jquery(window).height() - jquery('header.site-header#site-header-primary').height() ;
+var new_height = jQuery(window).height() - jQuery('header.site-header#site-header-primary').height() ;
 
-jquery('.splash').css("height",  new_height);
 
-jquery('header#site-header-primary').clone().prependTo('.page').removeAttr("id").addClass('site-header-secondary');
+jQuery(window).ready(function() {
 
-jquery('a[href*="#"]').click(function(event){
 
-	//prevent the default action for the click event
-	event.preventDefault();
+	jQuery('.splash').css("height",  new_height);
 
-	//get the full url - like mysitecom/index.htm#home
-	var full_url = this.href;
+	jQuery('header#site-header-primary').clone().prependTo('.page').removeAttr("id").addClass('site-header-secondary');
 
-	//split the url by # and get the anchor target name - home in mysitecom/index.htm#home
-	var parts = full_url.split("#");
-	var trgt = parts[1];
+	jQuery('a[href*="#"]').click(function(event){
 
-	//get the top offset of the target anchor
-	var target_offset = jquery("#"+trgt).offset();
-	var target_top = target_offset.top;
+		//prevent the default action for the click event
+		event.preventDefault();
 
-	// jquery('.navbar li').removeClass('active');
+		//get the full url - like mysitecom/index.htm#home
+		var full_url = this.href;
 
-	// jquery(this).addClass('active').parent().addClass('active');
+		//split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+		var parts = full_url.split("#");
+		var trgt = parts[1];
 
-	//goto that anchor by setting the body scroll top to anchor top
-	jquery('html, body').animate({scrollTop:target_top}, 500);
+		//get the top offset of the target anchor
+		var target_offset = jQuery("#"+trgt).offset();
+		var target_top = target_offset.top;
+
+		// jQuery('.navbar li').removeClass('active');
+
+		// jQuery(this).addClass('active').parent().addClass('active');
+
+		//goto that anchor by setting the body scroll top to anchor top
+		jQuery('html, body').animate({scrollTop:target_top}, 500);
+	});
+
+	jQuery('header.site-header a').click(function(event){
+
+		jQuery('header.site-header a').removeClass('current');
+		jQuery(this).addClass('current');
+
+	});
+
 });
 
-jquery('header.site-header a').click(function(event){
-
-	jquery('header.site-header a').removeClass('current');
-	jquery(this).addClass('current');
-
-});
-
-jquery(document).scroll(function() {
-  if (jquery(document).scrollTop() >= new_height) {
+jQuery(document).scroll(function() {
+  if (jQuery(document).scrollTop() >= new_height) {
 
   		console.log('show');
 		
-		jquery(".site-header-secondary").removeClass("hide-header").addClass("show-header");
+		jQuery(".site-header-secondary").removeClass("hide-header").addClass("show-header");
 
   } else {
 
   		console.log('hide');
 
-		jquery(".site-header-secondary").addClass("hide-header");
+		jQuery(".site-header-secondary").addClass("hide-header");
 
   }
 });
