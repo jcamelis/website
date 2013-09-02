@@ -1,7 +1,10 @@
-var new_height = jQuery(window).height() - jQuery('header.site-header#site-header-primary').height() ;
 
 
 jQuery(window).ready(function() {
+
+	var new_height = jQuery(window).height() - jQuery('header.site-header#site-header-primary').height() ;
+
+	jQuery('.carousel').carousel(200)
 
 
 	jQuery('.splash').css("height",  new_height);

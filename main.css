@@ -160,18 +160,94 @@ header.site-header h1.logo a {
 header.site-header h1.logo a img {
   width: 100%;
 }
+.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition: 0.6s ease-in-out top;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .active {
+  opacity: 1;
+}
+.carousel-fade .active.left,
+.carousel-fade .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .next.left,
+.carousel-fade .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
 section.splash {
   background: #000;
-  padding: 200px 0;
   text-align: center;
-  position: relative;
   background: #333;
+  position: relative;
+}
+section.splash .slide,
+section.splash .slide-inn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+section.splash .slide .slide-item,
+section.splash .slide-inn .slide-item {
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 74px;
+  opacity: 0;
+  left: 0;
+  background: url("img/slideshow/ChangeTT-00.jpg") center;
   background-size: cover;
 }
-section.splash img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
+section.splash .slide .slide-item.active,
+section.splash .slide-inn .slide-item.active {
+  opacity: 1;
+}
+section.splash .slide .slide-item.slide-item-2,
+section.splash .slide-inn .slide-item.slide-item-2 {
+  background-image: url("img/slideshow/ChangeTT-01.jpg");
+}
+section.splash .slide .slide-item.slide-item-3,
+section.splash .slide-inn .slide-item.slide-item-3 {
+  background-image: url("img/slideshow/ChangeTT-03.jpg");
+}
+section.splash .slide .slide-item.slide-item-4,
+section.splash .slide-inn .slide-item.slide-item-4 {
+  background-image: url("img/slideshow/ChangeTT-04.jpg");
+}
+section.splash .slide .slide-item.slide-item-5,
+section.splash .slide-inn .slide-item.slide-item-5 {
+  background-image: url("img/slideshow/ChangeTT-05.jpg");
+}
+section.splash .slide .slide-item.slide-item-6,
+section.splash .slide-inn .slide-item.slide-item-6 {
+  background-image: url("img/slideshow/ChangeTT-06.jpg");
+}
+section.splash .slide .slide-item.slide-item-7,
+section.splash .slide-inn .slide-item.slide-item-7 {
+  background-image: url("img/slideshow/ChangeTT-07.jpg");
+}
+section.splash .slide .slide-item.slide-item-8,
+section.splash .slide-inn .slide-item.slide-item-8 {
+  background-image: url("img/slideshow/ChangeTT-08.jpg");
+}
+section.splash .slide .slide-item.slide-item-9,
+section.splash .slide-inn .slide-item.slide-item-9 {
+  background-image: url("img/slideshow/ChangeTT-09.jpg");
+}
+section.splash .slide .slide-item.slide-item-10,
+section.splash .slide-inn .slide-item.slide-item-10 {
+  background-image: url("img/slideshow/ChangeTT-10.jpg");
 }
 section.splash a.skip-to-content {
   position: absolute;
@@ -181,6 +257,7 @@ section.splash a.skip-to-content {
   background: #333;
   padding: 20px;
   text-align: center;
+  z-index: 10000;
 }
 section.splash a.skip-to-content i {
   background: #fff url("img/icon-arrow-down.png") center 14px no-repeat;
@@ -343,7 +420,7 @@ section.contact textarea {
 section.contact .btn {
   background-color: #fff;
 }
-section {
+.section {
   padding: 40px 0;
 }
 footer.site-footer {
