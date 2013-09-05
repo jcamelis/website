@@ -399,6 +399,7 @@ section.profiles {
 }
 section.profiles h4 {
   font-weight: 100;
+  margin: 20px 0;
 }
 section.profiles .profiles-users {
   margin-top: 50px;
