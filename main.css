@@ -127,8 +127,8 @@ header.site-header .container nav.nav-left .kickstarter {
 }
 header.site-header .container nav.nav-left .kickstarter img {
   width: 120px;
-  margin-top: -4px;
-  height: 16px;
+  margin-top: -3px;
+  height: 14px;
 }
 header.site-header .container nav.nav-left a {
   margin-right: 70px;
@@ -176,7 +176,7 @@ header.site-header#site-header-primary .container h1.logo span {
 header.site-header#site-header-primary .container nav {
   line-height: 128px;
 }
-header.site-header#site-header-primary .container .twitter-header {
+header.site-header#site-header-primary .container nav .twitter-header {
   margin-top: -20px;
 }
 header.site-header#site-header-primary .triangle {
@@ -196,7 +196,7 @@ header.site-header.site-header-secondary .twitter-header {
   margin-top: -11px !important;
 }
 header.site-header.site-header-secondary h1.logo {
-  padding-top: 6px;
+  padding-top: 4px;
 }
 header.site-header.site-header-secondary h1.logo img {
   display: none;
@@ -399,9 +399,6 @@ section.profiles {
 }
 section.profiles h4 {
   font-weight: 100;
-}
-section.profiles h2 {
-  margin-bottom: 20px;
 }
 section.profiles .profiles-users {
   margin-top: 50px;
