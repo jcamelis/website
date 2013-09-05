@@ -23,28 +23,34 @@ html
     .page.not-loaded
 
       header#site-header-primary.site-header
-        .triangle
 
-        .container
-          nav.nav-left
-            a(href="http://blog.democracyos.org") Blog
-            a(href="#about") About
-            a(href="http://kickstarter.com").kickstarter
-              img(src="img/logo-kickstarter.png")
-          
-          h1.logo
-            a(href="index.html")
-              img(src="img/logo.png")
-              span Democracy&#9679;OS
+        .bg-grey
+          .container
 
-          nav.nav-right
-            a(href="#profiles") who we are
-            a(href="#faq") FAQ
-            a(href="#contact") join us
-            a(href="http://twitter.com/democracyos").twitter-header
-              i.flaticon.social.twitter
+            nav.nav-left
+              a(href="http://blog.democracyos.org") Blog
+              a(href="#about") About
+              a(href="http://kickstarter.com").kickstarter
+                img(src="img/logo-kickstarter.png")
+            
+            h1.logo
+              a(href="index.html")
+                img(src="img/logo.png")
+                span Democracy&#9679;OS
+
+            nav.nav-right
+              a(href="#profiles").who-we-are who we are
+              a(href="#faq") FAQ
+              a(href="#contact") join us
+              a(href="http://twitter.com/democracyos").twitter-header
+                i.flaticon.social.twitter
+
+        .clearfix.triangle-container
+          .triangle
 
       section.splash
+        .clearfix.triangle-container
+          .triangle
         .carousel.slide.carousel-fade
           .item.slide-item.slide-item-1.active
           .item.slide-item.slide-item-2

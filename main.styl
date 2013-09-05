@@ -90,87 +90,99 @@ body.not-loaded
 
 
 header.site-header
-	background: $bg_grey;
+	
 	border-top: 2px solid yellow;
 	text-align: center;
 	z-index: 1000;
 	overflow: visible !important;
+	background: transparent;
 
-
+	.bg-grey
+		background: $bg_grey;
 	.container 
 		position: relative;
-		.twitter-header 
-			background: url('img/hexagon.png') center;
-			width: 30px;
-			height: 36px;
-			margin-left: 20px !important;
-			background-size: cover;
-			display: inline-block;
-			color: black;
-			text-align: center
-			line-height: 40px;
+		width: 100%;
+
+		a 	
+			color: #999;
+			text-transform: uppercase
+			&:hover, &.current
+				color: white;
+			span 
+				color: white;
+				font-size: 16px;
 
 		nav.nav-left, nav.nav-right
-			display: block;
-			float: left
-			width: 43%;
+			position: absolute;
+			height: 126px;
+			bottom: 0;
+			top: 0;
+
+
 
 		nav.nav-left 
 			text-align: left;
+			left: 10px;
+			right: 50%;
 			.kickstarter
-				display: inline-block
+				margin-right: 0;
 				img 
 					width: 120px;
 					margin-top: -4px;
+					height: 16px;
 			a
-				margin-right: 60px;
+				margin-right: 70px;
 
 		nav.nav-right 
+			right: 10px;
+			left: 50%;
 			text-align: right
 			a
-				margin-left: 60px;
+				margin-left: 70px;
+				&.who-we-are
+					margin-left: 0;
+
+
+				&.twitter-header 
+					background: url('img/hexagon.png') center;
+					width: 30px;
+					height: 36px;
+					margin-left: 20px !important;
+					background-size: cover;
+					display: inline-block;
+					color: black;
+					text-align: center
+					line-height: 40px;
 
 		h1.logo 
-			width: 14%;
+			width: 160px;
 			text-align: center
-			float: left
-			margin: 0;
+			margin:  auto;
+			position: relative;
 			a 
 				display: block
 				img 
 					width: 100%;
 
-	.triangle
-		width: 0; 
-		height: 0; 
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;	
-		border-top: 20px solid $bg_grey;
-		// border-top: 20px solid red;
-		position: absolute;
-		margin: auto;
-		left: 40%;
-		right: 40%;
-		z-index: 10;
+
 
 	&#site-header-primary
 		.container
 			h1.logo
-				margin: 14px 0;
+				margin: 14px auto;
 				span 
 					display: none
 			nav 
-				margin-top: 58px;
+				line-height: 128px;
 			.twitter-header
 				margin-top: -20px;
 
 		.triangle 
-			top: 126px;
+			display: none
 
 
 	&.site-header-secondary
 		position: fixed;
-		top: -80px;
 		left: 0;
 		right: 0;
 		padding-bottom: 16px;
@@ -181,34 +193,40 @@ header.site-header
 		.twitter-header
 			margin-top: -11px !important;
 		h1.logo 
-			padding-top: 8px;
+			padding-top: 6px;
 			img 
 				display: none
 			span 
 				font-size: 20px;
 				color: white
+
+		.bg-grey
+			height: 60px;
 		nav 
-			padding-top: 24px;
+			line-height: 60px;
+			a 
+				display: inline-block
 		&.show-header
 			top: 0px;
 
 		&.hide-header
-			top: -80px;
+			top: -120px;
 
 		.triangle 
 			top: 55px;
 
-	a 	
-		color: #999;
-		text-transform: uppercase
-		&:hover, &.current
-			color: white;
-		span 
-			color: white;
-			font-size: 16px;
 
 
+.triangle
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;	
+	border-top: 20px solid $bg_grey;
+	margin: auto;
 
+	z-index: 10;
+	display: block
 
 
 
@@ -217,12 +235,21 @@ section.splash
 	text-align: center;
 	background: #333;
 	position: relative;
+
+	.triangle-container
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000000;
+
 	.slide, .slide-inn
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
+		z-index: 10;
 		.slide-item
 			padding: 30px;
 			position: absolute;
@@ -265,7 +292,7 @@ section.splash
 		background: #333;
 		padding: 10px;
 		text-align: center
-		z-index: 10000;
+		z-index: 100;
 		i 
 			background: white url('img/icon-arrow-down.png') center  12px no-repeat
 			display: block
@@ -294,7 +321,7 @@ section.about
 		.kickstarter-link
 			font-weight: bold;
 			color: black;
-			margin: 100px auto 0 auto;
+			margin: 50px auto 0 auto;
 			display: block
 			width: 100px;
 			text-align: center;

@@ -85,16 +85,66 @@ h2 {
   margin: auto;
 }
 header.site-header {
-  background: #2f2f2f;
   border-top: 2px solid #ff0;
   text-align: center;
   z-index: 1000;
   overflow: visible !important;
+  background: transparent;
+}
+header.site-header .bg-grey {
+  background: #2f2f2f;
 }
 header.site-header .container {
   position: relative;
+  width: 100%;
 }
-header.site-header .container .twitter-header {
+header.site-header .container a {
+  color: #999;
+  text-transform: uppercase;
+}
+header.site-header .container a:hover,
+header.site-header .container a.current {
+  color: #fff;
+}
+header.site-header .container a span {
+  color: #fff;
+  font-size: 16px;
+}
+header.site-header .container nav.nav-left,
+header.site-header .container nav.nav-right {
+  position: absolute;
+  height: 126px;
+  bottom: 0;
+  top: 0;
+}
+header.site-header .container nav.nav-left {
+  text-align: left;
+  left: 10px;
+  right: 50%;
+}
+header.site-header .container nav.nav-left .kickstarter {
+  margin-right: 0;
+}
+header.site-header .container nav.nav-left .kickstarter img {
+  width: 120px;
+  margin-top: -4px;
+  height: 16px;
+}
+header.site-header .container nav.nav-left a {
+  margin-right: 70px;
+}
+header.site-header .container nav.nav-right {
+  right: 10px;
+  left: 50%;
+  text-align: right;
+}
+header.site-header .container nav.nav-right a {
+  margin-left: 70px;
+}
+header.site-header .container nav.nav-right a.who-we-are {
+  margin-left: 0;
+}
+header.site-header .container nav.nav-right a.twitter-header {
   background: url("img/hexagon.png") center;
   width: 30px;
   height: 36px;
@@ -105,36 +155,11 @@ header.site-header .container .twitter-header {
   text-align: center;
   line-height: 40px;
 }
-header.site-header .container nav.nav-left,
-header.site-header .container nav.nav-right {
-  display: block;
-  float: left;
-  width: 43%;
-}
-header.site-header .container nav.nav-left {
-  text-align: left;
-}
-header.site-header .container nav.nav-left .kickstarter {
-  display: inline-block;
-}
-header.site-header .container nav.nav-left .kickstarter img {
-  width: 120px;
-  margin-top: -4px;
-}
-header.site-header .container nav.nav-left a {
-  margin-right: 60px;
-}
-header.site-header .container nav.nav-right {
-  text-align: right;
-}
-header.site-header .container nav.nav-right a {
-  margin-left: 60px;
-}
 header.site-header .container h1.logo {
-  width: 14%;
+  width: 160px;
   text-align: center;
-  float: left;
-  margin: 0;
+  margin: auto;
+  position: relative;
 }
 header.site-header .container h1.logo a {
   display: block;
@@ -142,36 +167,23 @@ header.site-header .container h1.logo a {
 header.site-header .container h1.logo a img {
   width: 100%;
 }
-header.site-header .triangle {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #2f2f2f;
-  position: absolute;
-  margin: auto;
-  left: 40%;
-  right: 40%;
-  z-index: 10;
-}
 header.site-header#site-header-primary .container h1.logo {
-  margin: 14px 0;
+  margin: 14px auto;
 }
 header.site-header#site-header-primary .container h1.logo span {
   display: none;
 }
 header.site-header#site-header-primary .container nav {
-  margin-top: 58px;
+  line-height: 128px;
 }
 header.site-header#site-header-primary .container .twitter-header {
   margin-top: -20px;
 }
 header.site-header#site-header-primary .triangle {
-  top: 126px;
+  display: none;
 }
 header.site-header.site-header-secondary {
   position: fixed;
-  top: -80px;
   left: 0;
   right: 0;
   padding-bottom: 16px;
@@ -184,7 +196,7 @@ header.site-header.site-header-secondary .twitter-header {
   margin-top: -11px !important;
 }
 header.site-header.site-header-secondary h1.logo {
-  padding-top: 8px;
+  padding-top: 6px;
 }
 header.site-header.site-header-secondary h1.logo img {
   display: none;
@@ -193,35 +205,46 @@ header.site-header.site-header-secondary h1.logo span {
   font-size: 20px;
   color: #fff;
 }
+header.site-header.site-header-secondary .bg-grey {
+  height: 60px;
+}
 header.site-header.site-header-secondary nav {
-  padding-top: 24px;
+  line-height: 60px;
+}
+header.site-header.site-header-secondary nav a {
+  display: inline-block;
 }
 header.site-header.site-header-secondary.show-header {
   top: 0px;
 }
 header.site-header.site-header-secondary.hide-header {
-  top: -80px;
+  top: -120px;
 }
 header.site-header.site-header-secondary .triangle {
   top: 55px;
 }
-header.site-header a {
-  color: #999;
-  text-transform: uppercase;
-}
-header.site-header a:hover,
-header.site-header a.current {
-  color: #fff;
-}
-header.site-header a span {
-  color: #fff;
-  font-size: 16px;
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #2f2f2f;
+  margin: auto;
+  z-index: 10;
+  display: block;
 }
 section.splash {
   background: #000;
   text-align: center;
   background: #333;
   position: relative;
+}
+section.splash .triangle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000000;
 }
 section.splash .slide,
 section.splash .slide-inn {
@@ -230,6 +253,7 @@ section.splash .slide-inn {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 section.splash .slide .slide-item,
 section.splash .slide-inn .slide-item {
@@ -291,7 +315,7 @@ section.splash a.skip-to-content {
   background: #333;
   padding: 10px;
   text-align: center;
-  z-index: 10000;
+  z-index: 100;
 }
 section.splash a.skip-to-content i {
   background: #fff url("img/icon-arrow-down.png") center 12px no-repeat;
@@ -321,7 +345,7 @@ section.about .about-left p {
 section.about .about-left .kickstarter-link {
   font-weight: bold;
   color: #000;
-  margin: 100px auto 0 auto;
+  margin: 50px auto 0 auto;
   display: block;
   width: 100px;
   text-align: center;

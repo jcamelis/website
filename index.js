@@ -9,7 +9,7 @@ jQuery(window).ready(function() {
 
 	jQuery('.splash').css("height",  new_height);
 
-	jQuery('header#site-header-primary').clone().prependTo('.page').removeAttr("id").addClass('site-header-secondary');
+	jQuery('header#site-header-primary').clone().prependTo('.page').removeAttr("id").addClass('site-header-secondary hide-header');
 
 	jQuery('a[href*="#"]').click(function(event){
 
