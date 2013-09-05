@@ -131,7 +131,7 @@ header.site-header .container nav.nav-left .kickstarter img {
   height: 14px;
 }
 header.site-header .container nav.nav-left a {
-  margin-right: 70px;
+  margin-right: 60px;
 }
 header.site-header .container nav.nav-right {
   right: 10px;
@@ -139,7 +139,7 @@ header.site-header .container nav.nav-right {
   text-align: right;
 }
 header.site-header .container nav.nav-right a {
-  margin-left: 70px;
+  margin-left: 60px;
 }
 header.site-header .container nav.nav-right a.who-we-are {
   margin-left: 0;
@@ -469,16 +469,18 @@ section.contact address p i {
   display: inline-block;
   background-size: 100%;
   width: 38px;
-  height: 42px;
+  height: 44px;
   margin-right: 10px;
   color: #000;
   text-align: center;
-  font-size: 22px;
-  line-height: 44px;
+  font-size: 16px;
+  line-height: 48px;
+  color: #794a92;
 }
 section.contact h2 {
   color: #fff;
   margin-bottom: 30px;
+  font-size: 40px;
   text-transform: uppercase;
 }
 section.contact input.text,
