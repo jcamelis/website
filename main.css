@@ -91,20 +91,83 @@ header.site-header {
   z-index: 1000;
   overflow: visible !important;
 }
+header.site-header .container {
+  position: relative;
+}
+header.site-header .container .twitter-header {
+  background: url("img/hexagon.png") center;
+  width: 30px;
+  height: 36px;
+  margin-left: 20px !important;
+  background-size: cover;
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+}
+header.site-header .container nav.nav-left,
+header.site-header .container nav.nav-right {
+  display: block;
+  float: left;
+  width: 43%;
+}
+header.site-header .container nav.nav-left {
+  text-align: left;
+}
+header.site-header .container nav.nav-left .kickstarter {
+  display: inline-block;
+}
+header.site-header .container nav.nav-left .kickstarter img {
+  width: 120px;
+  margin-top: -4px;
+}
+header.site-header .container nav.nav-left a {
+  margin-right: 60px;
+}
+header.site-header .container nav.nav-right {
+  text-align: right;
+}
+header.site-header .container nav.nav-right a {
+  margin-left: 60px;
+}
+header.site-header .container h1.logo {
+  width: 14%;
+  text-align: center;
+  float: left;
+  margin: 0;
+}
+header.site-header .container h1.logo a {
+  display: block;
+}
+header.site-header .container h1.logo a img {
+  width: 100%;
+}
+header.site-header .triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #2f2f2f;
+  position: absolute;
+  margin: auto;
+  left: 40%;
+  right: 40%;
+  z-index: 10;
+}
 header.site-header#site-header-primary .container h1.logo {
-  margin: 20px 0;
+  margin: 14px 0;
 }
 header.site-header#site-header-primary .container h1.logo span {
   display: none;
 }
 header.site-header#site-header-primary .container nav {
-  margin-top: 82px;
+  margin-top: 58px;
 }
 header.site-header#site-header-primary .container .twitter-header {
   margin-top: -20px;
 }
 header.site-header#site-header-primary .triangle {
-  top: 180px;
+  top: 126px;
 }
 header.site-header.site-header-secondary {
   position: fixed;
@@ -154,69 +217,6 @@ header.site-header a span {
   color: #fff;
   font-size: 16px;
 }
-header.site-header .container {
-  position: relative;
-}
-header.site-header .container .twitter-header {
-  background: url("img/hexagon.png") center;
-  width: 30px;
-  height: 36px;
-  margin-left: 20px !important;
-  background-size: cover;
-  display: inline-block;
-  color: #000;
-  text-align: center;
-  line-height: 40px;
-}
-header.site-header .container nav.nav-left,
-header.site-header .container nav.nav-right {
-  display: block;
-  float: left;
-  width: 40%;
-}
-header.site-header .container nav.nav-left {
-  text-align: left;
-}
-header.site-header .container nav.nav-left .kickstarter {
-  display: inline-block;
-}
-header.site-header .container nav.nav-left .kickstarter img {
-  width: 120px;
-  margin-top: -4px;
-}
-header.site-header .container nav.nav-left a {
-  margin-right: 60px;
-}
-header.site-header .container nav.nav-right {
-  text-align: right;
-}
-header.site-header .container nav.nav-right a {
-  margin-left: 60px;
-}
-header.site-header .container h1.logo {
-  width: 20%;
-  text-align: center;
-  float: left;
-  margin: 0;
-}
-header.site-header .container h1.logo a {
-  display: block;
-}
-header.site-header .container h1.logo a img {
-  width: 100%;
-}
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #2f2f2f;
-  position: absolute;
-  margin: auto;
-  left: 40%;
-  right: 40%;
-  z-index: 10;
-}
 section.splash {
   background: #000;
   text-align: center;
@@ -237,7 +237,7 @@ section.splash .slide-inn .slide-item {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 74px;
+  bottom: 50px;
   opacity: 0;
   left: 0;
   background: url("img/slideshow/ChangeTT-00.jpg") center;
@@ -289,16 +289,16 @@ section.splash a.skip-to-content {
   left: 0;
   right: 0;
   background: #333;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   z-index: 10000;
 }
 section.splash a.skip-to-content i {
-  background: #fff url("img/icon-arrow-down.png") center 14px no-repeat;
+  background: #fff url("img/icon-arrow-down.png") center 12px no-repeat;
   display: block;
-  width: 34px;
+  width: 30px;
   margin: auto;
-  height: 34px;
+  height: 30px;
   border-radius: 100px;
 }
 section.about {
@@ -312,7 +312,7 @@ section.about .about-right {
   display: inline-block;
 }
 section.about .about-left {
-  padding: 20px 50px;
+  padding: 50px 50px;
   text-align: center;
 }
 section.about .about-left p {
