@@ -110,41 +110,43 @@ header.site-header .container a span {
   color: #fff;
   font-size: 16px;
 }
-header.site-header .container nav.nav-left,
-header.site-header .container nav.nav-right {
+header.site-header .container .nav-left,
+header.site-header .container .nav-right {
   position: absolute;
   height: 126px;
   bottom: 0;
   top: 0;
 }
-header.site-header .container nav.nav-left {
-  text-align: left;
-  left: 10px;
+header.site-header .container .nav-left {
+  text-align: right;
+  left: 0;
   right: 50%;
+  padding-right: 150px;
 }
-header.site-header .container nav.nav-left .kickstarter {
+header.site-header .container .nav-left .kickstarter {
   margin-right: 0;
 }
-header.site-header .container nav.nav-left .kickstarter img {
+header.site-header .container .nav-left .kickstarter img {
   width: 120px;
   margin-top: -3px;
   height: 14px;
 }
-header.site-header .container nav.nav-left a {
+header.site-header .container .nav-left a {
   margin-right: 60px;
 }
-header.site-header .container nav.nav-right {
-  right: 10px;
+header.site-header .container .nav-right {
+  right: 0;
   left: 50%;
-  text-align: right;
+  text-align: left;
+  padding-left: 150px;
 }
-header.site-header .container nav.nav-right a {
+header.site-header .container .nav-right a {
   margin-left: 60px;
 }
-header.site-header .container nav.nav-right a.who-we-are {
+header.site-header .container .nav-right a.who-we-are {
   margin-left: 0;
 }
-header.site-header .container nav.nav-right a.twitter-header {
+header.site-header .container .nav-right a.twitter-header {
   background: url("img/hexagon.png") center;
   width: 30px;
   height: 36px;
@@ -420,6 +422,19 @@ section.profiles .hexagon2 {
   height: 300px;
   margin: -80px 0 0 6px;
 }
+section.profiles .hexagon2 .hexagon-hover {
+  opacity: 0;
+}
+section.profiles .hexagon2 .hexagon-hover span {
+  line-height: 300px;
+}
+section.profiles .hexagon2:hover .hexagon-hover {
+  background: rgba(0,0,0,0.4);
+  opacity: 1;
+}
+section.profiles .hexagon2:hover .hexagon-hover span {
+  display: block;
+}
 section.profiles .hexagon-in1 {
   overflow: hidden;
   width: 100%;
@@ -435,7 +450,6 @@ section.profiles .hexagon-in2 {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 120%;
-  background-image: url("https://si0.twimg.com/profile_images/2583335118/yts2np89ifncbi0j3vgm.jpeg");
   visibility: visible;
   -webkit-transform: rotate(-60deg);
   -moz-transform: rotate(-60deg);
@@ -451,6 +465,7 @@ section.contact {
   background: #333;
   background-size: cover;
   color: #fff;
+  padding-bottom: 40px;
 }
 section.contact address {
   font-size: 30px;
@@ -479,6 +494,7 @@ section.contact address p i {
 section.contact h2 {
   color: #fff;
   margin-bottom: 30px;
+  margin-top: 0;
   font-size: 40px;
   text-transform: uppercase;
 }
