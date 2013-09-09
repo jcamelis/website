@@ -164,6 +164,7 @@ header.site-header .container h1.logo {
   text-align: center;
   margin: auto;
   position: relative;
+  z-index: 1000;
 }
 header.site-header .container h1.logo a {
   display: block;
@@ -526,6 +527,39 @@ section.contact .btn {
 }
 .section {
   padding: 40px 0;
+}
+section.kickstarter-slide {
+  background-color: #85cc00;
+  padding: 100px 0;
+  position: relative;
+  color: #fff;
+}
+section.kickstarter-slide .logo-big {
+  margin-bottom: 30px;
+}
+section.kickstarter-slide p {
+  font-size: 18px;
+  max-width: 670px;
+  margin: auto;
+  margin-top: 20px;
+}
+section.kickstarter-slide .small-ks {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+section.kickstarter-slide form input {
+  padding: 10px 20px;
+  border: 0;
+}
+section.kickstarter-slide form input[type="text"] {
+  width: 300px;
+}
+section.kickstarter-slide form .button-submit {
+  margin-left: 10px;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
 }
 footer.site-footer {
   background: #222;

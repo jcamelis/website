@@ -163,6 +163,7 @@ header.site-header
 			text-align: center
 			margin:  auto;
 			position: relative;
+			z-index: 1000;
 			a 
 				display: block
 				img 
@@ -492,7 +493,37 @@ section.contact
 .section
 	padding: 40px 0;
 
+section.kickstarter-slide
+	background-color: #85CC00;
+	padding: 100px 0;
+	position: relative;
+	color: white;
 
+	.logo-big
+		margin-bottom: 30px;
+	p
+		font-size: 18px;
+		max-width: 670px;
+		margin: auto;
+		margin-top: 20px;
+	.small-ks
+		position: absolute;
+		bottom: 40px; 
+		right: 40px;
+
+	form 
+		input
+			padding: 10px 20px;
+			border: 0;
+			&[type="text"]
+				width: 300px;
+
+
+		.button-submit
+			margin-left: 10px;
+			background: #333;
+			color: white;
+			font-weight: bold
 
 
 footer.site-footer
