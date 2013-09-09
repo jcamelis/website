@@ -88,6 +88,9 @@ body.not-loaded
 	.page
 		// opacity: 0;
 
+.section 
+	min-width: 1200px !important;
+
 
 header.site-header
 	
@@ -396,16 +399,24 @@ section.profiles
 		width: 150px;
 		height: 300px;
 		margin: -80px 0 0 6px;
+		position: relative;
 		.hexagon-hover 
-			opacity: 0
-			span 
-				line-height: 300px;
-		&:hover 
-			.hexagon-hover
+			display: block
+			opacity: 0;
+			position: absolute;
+			z-index: 1000000;
+			.hexagon-in2
+				background: rgba(0,0,0,.8);
+			span
+				color: white;
+			span:first-child
+				display: block
+				padding-top: 130px;
+			&:hover 
+				z-index: 10000;
 				background: rgba(0,0,0,.4)
 				opacity: 1;
-				span 
-					display: block
+
 
 
 	.hexagon-in1
